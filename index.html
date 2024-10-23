@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <section class="container bg-red-200 p-10 my-20 mx-auto rounded-lg">
+    <div class="flex justify-between">
+      <h2 class="text-2xl font-semibold text-red-900">
+        My Check List
+      </h2>
+      <button id="modelOpener" class="text-white bg-red-700 px-5 py-2 rounded-md" >Add Items</button>
+    </div>
+    <ul class="mt-6 list-decimal pl-10" id="myList">
+      <!-- <li class="flex gap-1">
+        <span>1.</span>
+        <p>test</p>
+      </li> -->
+    </ul>
+  </section>
+  <section id="model" class="absolute h-screen w-screen top-0 left-0 bg-gray-900/30 flex justify-center items-center">
+    <div class="container mx-auto bg-white p-10 rounded-lg relative">
+      <button class="absolute top-2 right-5 font-semibold" onclick="toggleModel()">Close</button>
+      <div class=" flex justify-center items-center gap-10">
+        <input type="text" class="border-2  border-black rounded-lg p-2 text-lg" id="inputLi" >
+        <button id="addBtn" class="bg-red-700 py-3 px-10 rounded-xl text-xl text-white ">Add</button>
+      </div>
+    </div>
+  </section>
+  
+  <script src="./index.js"></script>
+</body>
+</html>
