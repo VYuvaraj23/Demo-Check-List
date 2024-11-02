@@ -5,7 +5,8 @@ const addBtn = document.querySelector('#addBtn');
 const list = document.querySelector('#myList');
 const model = document.querySelector('#model');
 const inputLi = document.querySelector('#inputLi');
-
+const mainSection = document.querySelector('#mainSection');
+// mainSection.style.display = "block";
 model.style.display = "none";
 
 modelOpener.onclick = () => {
@@ -17,9 +18,13 @@ function toggleModel() {
   isModelOpen = !isModelOpen;
   if (isModelOpen) {
     model.style.display = "flex";
+    mainSection.style.display= "none";
+
   }
   else {
     model.style.display = "none";
+    mainSection.style.display= "block";
+
   }
 }
 
@@ -44,6 +49,7 @@ addBtn.onclick = () => {
     li.appendChild(delBtn);
     list.appendChild(li);
     console.log(inputLi.value);
+    mainSection.style.display = "block";
   }
   toggleModel();
 }
